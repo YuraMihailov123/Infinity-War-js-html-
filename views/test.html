@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div.viewport {
+            overflow: hidden;
+            position: relative;
+        }
+
+        img.clipped {
+            display: block;
+            position: absolute;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+<div class="viewport">
+    <img class="clipped" src="../MyLib/images/Dwarf%20Sprite%20Sheet.png" alt="Clipped image"/>
+    <img class="clipped" src="../MyLib/images/Dwarf%20Sprite%20Sheet.png" alt="Clipped image"/>
+</div>
+<script type="text/javascript">
+    function setViewport(img, x, y, width, height) {
+        img.style.left = "-" + x + "px";
+        img.style.top  = "-" + y + "px";
+
+        if (width !== undefined) {
+            img.parentNode.style.width  = width  + "px";
+            img.parentNode.style.height = height + "px";
+        }
+    }
+    function ff() {
+        for(var i=0;i<5;i++) {
+            setViewport(document.getElementsByTagName("img")[0], 32, 32, 32*i, 32);
+            document.getElementsByTagName("img")[0].
+            //document.getElementsByTagName("img")[0].p
+        }
+    }
+
+    setInterval(ff,500);
+    //setViewport(document.getElementsByTagName("img")[1], 0, 0, 32,32);
+</script>
+</body>
+</html>

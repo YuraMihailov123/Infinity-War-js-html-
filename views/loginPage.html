@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <div style="margin-left: 720px; margin-top: 200px">Made by:</div>
+    <img style="margin-left: 700px" src="../MyLib/images/logo.png">
+    <p style="margin-left: 600px"   > Enter nickname:
+    <input type=placeholder id="name">
+    <p style="margin-left: 700px">
+        <input style="width: 100px; height: 30px;" type=button value="Play" onclick="checkEmpty()">
+
+</body>
+<script>
+    var txt = document.getElementById("name");
+
+
+    function checkEmpty(){
+        if(txt.value!=="") {
+            go();
+
+        }else {
+            alert("Placeholder must be not empty! Try to enter your nickname.");
+        }
+
+    }
+    window.go=function () {
+
+        localStorage["nickname"] = txt.value;
+        window.location = "gameView.html";
+    }
+</script>
+</html>

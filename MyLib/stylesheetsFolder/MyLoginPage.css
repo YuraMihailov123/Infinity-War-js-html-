@@ -1,0 +1,11 @@
+body{
+    background:#202028;
+    color:#fff;
+    font-family: sans-serif;
+
+
+}
+canvas{
+    background-color: transparent;
+    margin-top: 50px;
+}
